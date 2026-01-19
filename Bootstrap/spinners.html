@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Bài tập Spinners - DANG NGOC DUY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-4">
+  <h2>Biểu Tượng Loading (Spinners)</h2>
+  <p>Sinh viên: DANG NGOC DUY - MSSV: 2221050278</p>
+  <hr>
+
+  <h4>1. Loại cơ bản</h4>
+  <p>Dùng để báo hiệu đang tải trang:</p>
+  
+  <div class="spinner-border text-primary"></div>
+  <span>Đang xoay (Border Spinner)</span>
+  
+  <br><br>
+  
+  <div class="spinner-grow text-success"></div>
+  <span>Đang tỏa (Grow Spinner)</span>
+
+  <hr>
+
+  <h4>2. Màu sắc (Colors)</h4>
+  <div class="spinner-border text-primary"></div>
+  <div class="spinner-border text-success"></div>
+  <div class="spinner-border text-info"></div>
+  <div class="spinner-border text-warning"></div>
+  <div class="spinner-border text-danger"></div>
+  <div class="spinner-border text-secondary"></div>
+  <div class="spinner-border text-dark"></div>
+
+  <hr>
+
+  <h4>3. Hiệu ứng nút "Đang xử lý"</h4>
+  <p>Rất hay dùng khi người dùng bấm nút Submit:</p>
+  
+  <button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+  </button>
+
+  <button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+    Đang tải...
+  </button>
+  
+  <button class="btn btn-danger" disabled>
+    <span class="spinner-grow spinner-grow-sm"></span>
+    Đang lưu dữ liệu...
+  </button>
+
+</div>
+
+</body>
+</html>

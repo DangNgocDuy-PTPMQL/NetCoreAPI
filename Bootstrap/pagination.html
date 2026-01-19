@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Bài tập Pagination - DANG NGOC DUY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-4">
+  <h2>Phân trang (Pagination)</h2>
+  <p>Sinh viên: DANG NGOC DUY - MSSV: 2221050278</p>
+  <hr>
+
+  <h4>1. Phân trang cơ bản</h4>
+  <p>Dùng danh sách <code>ul</code> với class <code>.pagination</code>:</p>
+  
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+  </ul>
+
+  <hr>
+
+  <h4>2. Trạng thái (Active & Disabled)</h4>
+  <p>Dùng class <code>.active</code> để đánh dấu trang hiện tại.</p>
+  <p>Dùng class <code>.disabled</code> để khóa nút (Ví dụ: Đang ở trang 1 thì không bấm được nút "Trước").</p>
+  
+  <ul class="pagination">
+    <li class="page-item disabled"><a class="page-link" href="#">Trước</a></li>
+    
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+  </ul>
+
+  <hr>
+
+  <h4>3. Kích thước (Lớn/Nhỏ)</h4>
+  <p>Thêm class <code>.pagination-lg</code> hoặc <code>.pagination-sm</code>:</p>
+  
+  <ul class="pagination pagination-lg">
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+
+  <ul class="pagination pagination-sm">
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+
+</div>
+
+</body>
+</html>

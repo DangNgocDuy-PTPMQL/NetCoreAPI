@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Bài tập Tables - DANG NGOC DUY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+  
+  <h2 class="text-primary text-center">BÁO CÁO DOANH THU THÁNG 1/2026</h2>
+  <p class="text-center">Người lập: <b>DANG NGOC DUY</b> - MSSV: 2221050278</p>            
+  <hr>
+
+  <h4 class="mt-4">1. Danh sách sản phẩm (Table Striped)</h4>
+  <p>Sử dụng class <code>.table-striped</code> để tạo các dòng màu xen kẽ.</p>
+  
+  <table class="table table-striped border">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Mã SP</th>
+        <th>Tên Sản Phẩm</th>
+        <th>Đơn Giá</th>
+        <th>Tồn Kho</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>LT-001</td>
+        <td>Laptop Dell XPS 13</td>
+        <td>25.000.000 đ</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>LT-002</td>
+        <td>MacBook Air M2</td>
+        <td>27.000.000 đ</td>
+        <td>05</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>DT-001</td>
+        <td>iPhone 15 Pro Max</td>
+        <td>30.000.000 đ</td>
+        <td>20</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="mt-5">2. Tình trạng Lợi nhuận (Table Hover & Colors)</h4>
+  <p>Sử dụng <code>.table-hover</code> và các màu trạng thái (Xanh, Đỏ, Vàng) để báo cáo KPI.</p>
+
+  <table class="table table-hover table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Chi Nhánh</th>
+        <th>Doanh Thu</th>
+        <th>Chi Phí</th>
+        <th>Lợi Nhuận</th>
+        <th>Trạng Thái</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-success">
+        <td>Hà Nội</td>
+        <td>1 tỷ</td>
+        <td>500 triệu</td>
+        <td>+500 triệu</td>
+        <td>Đạt chỉ tiêu (Tốt)</td>
+      </tr>
+      <tr class="table-warning">
+        <td>Đà Nẵng</td>
+        <td>600 triệu</td>
+        <td>550 triệu</td>
+        <td>+50 triệu</td>
+        <td>Cần cố gắng</td>
+      </tr>
+      <tr class="table-danger">
+        <td>TP. HCM</td>
+        <td>800 triệu</td>
+        <td>900 triệu</td>
+        <td>-100 triệu</td>
+        <td>Thua lỗ (Cảnh báo)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="container-fluid mt-5 p-3 bg-secondary text-white text-center">
+  <small>© 2026 DANG NGOC DUY - Bootstrap Tables Demo</small>
+</div>
+
+</body>
+</html>

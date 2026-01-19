@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Bài tập Popover - DANG NGOC DUY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Bảng Thông Tin Nổi Popover</h2>
+  <p>Sinh viên: DANG NGOC DUY - MSSV: 2221050278</p>
+  <p><b>Bấm chuột</b> vào nút bên dưới để xem kết quả:</p>
+  <hr>
+
+  <h4>1. Cơ bản (Click to toggle)</h4>
+  
+  <button type="button" class="btn btn-primary" 
+          data-bs-toggle="popover" 
+          title="Tiêu đề Popover" 
+          data-bs-content="Đây là nội dung chi tiết! Nó có thể chứa nhiều thông tin hơn Tooltip.">
+    Bấm vào tôi
+  </button>
+
+  <hr>
+
+  <h4>2. Tự đóng khi bấm ra ngoài (Dismissible)</h4>
+  <p>Loại này tiện hơn, bấm đâu cũng tắt được:</p>
+  
+  <a tabindex="0" class="btn btn-danger" role="button" 
+     data-bs-toggle="popover" data-bs-trigger="focus" 
+     title="Thông báo" 
+     data-bs-content="Chỉ cần bấm ra ngoài khoảng trắng là tôi tự tắt!">
+    Bấm thử xem
+  </a>
+
+</div>
+
+<script>
+// Khởi tạo tất cả các Popover trong trang
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+</script>
+
+</body>
+</html>
