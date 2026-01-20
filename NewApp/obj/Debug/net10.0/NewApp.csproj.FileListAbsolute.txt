@@ -1,0 +1,15 @@
+D:\Git\Net Core API\NewApp\bin\Debug\net10.0\NewApp.exe
+D:\Git\Net Core API\NewApp\bin\Debug\net10.0\NewApp.deps.json
+D:\Git\Net Core API\NewApp\bin\Debug\net10.0\NewApp.runtimeconfig.json
+D:\Git\Net Core API\NewApp\bin\Debug\net10.0\NewApp.dll
+D:\Git\Net Core API\NewApp\bin\Debug\net10.0\NewApp.pdb
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\NewApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\NewApp.AssemblyInfoInputs.cache
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\NewApp.AssemblyInfo.cs
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\NewApp.csproj.CoreCompileInputs.cache
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\NewApp.sourcelink.json
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\NewApp.dll
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\refint\NewApp.dll
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\NewApp.pdb
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\NewApp.genruntimeconfig.cache
+D:\Git\Net Core API\NewApp\obj\Debug\net10.0\ref\NewApp.dll
