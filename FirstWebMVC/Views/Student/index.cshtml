@@ -1,0 +1,26 @@
+@model YourProjectName.Models.Student
+
+<h2>Nhập thông tin sinh viên</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label>Mã sinh viên:</label>
+        <input type="text" name="StudentCode" value="@Model?.StudentCode" />
+    </div>
+
+    <div>
+        <label>Họ và tên:</label>
+        <input type="text" name="FullName" value="@Model?.FullName" />
+    </div>
+
+    <br />
+    <button type="submit">Gửi</button>
+</form>
+
+@if (Model != null)
+{
+    <hr />
+    <h3>Kết quả:</h3>
+    <p>Mã SV: @Model.StudentCode</p>
+    <p>Họ tên: @Model.FullName</p>
+}
