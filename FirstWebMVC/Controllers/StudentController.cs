@@ -1,17 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
-using YourProjectName.Models;
+using FirstWebMVC.Models.Entities;
 
-public class StudentController : Controller
+namespace FirstWebMVC.Controllers
 {
-    [HttpGet]
-    public IActionResult Index()
+    public class StudentController : Controller
     {
-        return View();
-    }
+        public IActionResult Index()
+        {
+            List<Student> students = new List<Student>()
+            {
+                new Student { StudentCode = "SV01", FullName = "Nguyen Van A" },
+                new Student { StudentCode = "SV02", FullName = "Tran Thi B" }
+            };
 
-    [HttpPost]
-    public IActionResult Index(Student student)
-    {
-        return View(student);
+            return View(students);
+        }
     }
 }

@@ -1,26 +1,17 @@
-@model YourProjectName.Models.Student
+@model List<FirstWebMVC.Models.Entities.Student>
+<h2>Danh sách sinh viên</h2>
 
-<h2>Nhập thông tin sinh viên</h2>
+<table border="1">
+    <tr>
+        <th>Mã SV</th>
+        <th>Họ tên</th>
+    </tr>
 
-<form asp-action="Index" method="post">
-    <div>
-        <label>Mã sinh viên:</label>
-        <input type="text" name="StudentCode" value="@Model?.StudentCode" />
-    </div>
-
-    <div>
-        <label>Họ và tên:</label>
-        <input type="text" name="FullName" value="@Model?.FullName" />
-    </div>
-
-    <br />
-    <button type="submit">Gửi</button>
-</form>
-
-@if (Model != null)
+@foreach (var item in Model)
 {
-    <hr />
-    <h3>Kết quả:</h3>
-    <p>Mã SV: @Model.StudentCode</p>
-    <p>Họ tên: @Model.FullName</p>
+    <tr>
+        <td>@item.StudentCode</td>
+        <td>@item.FullName</td>
+    </tr>
 }
+</table>

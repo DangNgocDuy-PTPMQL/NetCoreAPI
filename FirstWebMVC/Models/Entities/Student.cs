@@ -1,11 +1,13 @@
-namespace YourProjectName.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace FirstWebMVC.Models.Entities
 {
     public class Student
     {
-        public string StudentCode { get; set; }
-        public string FullName { get; set; }
+        [Key]
+        public string StudentCode { get; set; } = "";
+
+        public string? FullName { get; set; }
     }
 }
-
-
        
