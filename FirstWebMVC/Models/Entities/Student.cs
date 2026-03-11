@@ -1,13 +1,12 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace FirstWebMVC.Models.Entities
 {
     public class Student
     {
-        [Key]
-        public string StudentCode { get; set; } = "";
+        public int Id { get; set; }
 
-        public string? FullName { get; set; }
+        public string StudentCode { get; set; } = string.Empty;
+
+        public string FullName { get; set; } = string.Empty;
     }
 }
        

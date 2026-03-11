@@ -1,17 +1,25 @@
 @model List<FirstWebMVC.Models.Entities.Student>
+
 <h2>Danh sách sinh viên</h2>
+
+<a href="/Student/Create">Thêm sinh viên</a>
 
 <table border="1">
     <tr>
         <th>Mã SV</th>
         <th>Họ tên</th>
+        <th>Chức năng</th>
     </tr>
 
-@foreach (var item in Model)
+@foreach(var item in Model)
 {
     <tr>
         <td>@item.StudentCode</td>
         <td>@item.FullName</td>
+        <td>
+            <a href="/Student/Edit/@item.Id">Sửa</a>
+            <a href="/Student/Delete/@item.Id">Xóa</a>
+        </td>
     </tr>
 }
 </table>
