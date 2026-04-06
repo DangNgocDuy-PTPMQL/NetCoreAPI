@@ -2,24 +2,30 @@
 
 <h2>Danh sách sinh viên</h2>
 
-<a href="/Student/Create">Thêm sinh viên</a>
+<p>
+    <a asp-controller="Student" asp-action="Create">Thêm sinh viên</a>
+</p>
 
-<table border="1">
-    <tr>
-        <th>Mã SV</th>
-        <th>Họ tên</th>
-        <th>Chức năng</th>
-    </tr>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Mã SV</th>
+            <th>Họ tên</th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
 
-@foreach(var item in Model)
-{
-    <tr>
-        <td>@item.StudentCode</td>
-        <td>@item.FullName</td>
-        <td>
-            <a href="/Student/Edit/@item.Id">Sửa</a>
-            <a href="/Student/Delete/@item.Id">Xóa</a>
-        </td>
-    </tr>
-}
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentCode</td>
+            <td>@item.FullName</td>
+            <td>
+                <a asp-controller="Student" asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+                <a asp-controller="Student" asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
+            </td>
+        </tr>
+    }
+    </tbody>
 </table>

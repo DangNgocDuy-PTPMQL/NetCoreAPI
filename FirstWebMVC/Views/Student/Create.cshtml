@@ -1,19 +1,22 @@
 @model FirstWebMVC.Models.Entities.Student
 
-<h2>Thêm sinh viên</h2>
+<form asp-action="Create">
 
-<form method="post">
+    <div>
+        <label>Mã sinh viên</label>
+        <input asp-for="StudentCode" />
+        <span asp-validation-for="StudentCode" class="text-danger"></span>
+    </div>
 
-    <label>Mã sinh viên</label>
-    <input asp-for="StudentCode" />
+    <div>
+        <label>Họ tên</label>
+        <input asp-for="FullName" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
 
-    <br/>
-
-    <label>Họ tên</label>
-    <input asp-for="FullName" />
-
-    <br/>
-
-    <button type="submit">Lưu</button>
-
+    <button type="submit">Thêm</button>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
