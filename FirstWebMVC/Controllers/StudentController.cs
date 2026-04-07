@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using FirstWebMVC.Models.Entities;
+using FirstWebMVC.Models.ViewModels; // 🔥 THÊM
 using FirstWebMVC.Data;
 
 public class StudentController : Controller
@@ -11,18 +14,27 @@ public class StudentController : Controller
         _context = context;
     }
 
-    // LIST
+    // LIST (🔥 dùng ViewModel + LINQ)
     public IActionResult Index()
     {
-        var students = _context.Students.ToList();
-        return View(students);
+        var data = _context.Students
+            .Select(s => new StudentVM
+            {
+                Id = s.Id,
+                StudentCode = s.StudentCode,
+                FullName = s.FullName,
+                FacultyName = s.Faculty != null ? s.Faculty.FacultyName : ""
+            }).ToList();
+
+        return View(data);
     }
 
     // CREATE - GET
-    public IActionResult Create()
-    {
-        return View();
-    }
+   public IActionResult Create()
+{
+    ViewBag.Faculties = new SelectList(_context.Faculties, "Id", "FacultyName");
+    return View();
+}
 
     // CREATE - POST
     [HttpPost]
@@ -35,6 +47,7 @@ public class StudentController : Controller
             return RedirectToAction("Index");
         }
 
+        ViewBag.Faculties = new SelectList(_context.Faculties, "Id", "FacultyName");
         return View(student);
     }
 
@@ -43,12 +56,12 @@ public class StudentController : Controller
     {
         var student = _context.Students.Find(id);
 
-        // ✅ THÊM CHECK NOT FOUND
         if (student == null)
         {
             return View("NotFound");
         }
 
+        ViewBag.Faculties = new SelectList(_context.Faculties, "Id", "FacultyName", student.FacultyId);
         return View(student);
     }
 
@@ -63,6 +76,7 @@ public class StudentController : Controller
             return RedirectToAction("Index");
         }
 
+        ViewBag.Faculties = new SelectList(_context.Faculties, "Id", "FacultyName", student.FacultyId);
         return View(student);
     }
 
@@ -71,7 +85,6 @@ public class StudentController : Controller
     {
         var student = _context.Students.Find(id);
 
-        // ✅ THÊM CHECK NOT FOUND
         if (student == null)
         {
             return View("NotFound");

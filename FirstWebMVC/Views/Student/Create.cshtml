@@ -13,7 +13,12 @@
         <input asp-for="FullName" />
         <span asp-validation-for="FullName" class="text-danger"></span>
     </div>
-
+<div class="form-group">
+    <label>Khoa</label>
+    <select asp-for="FacultyId" asp-items="ViewBag.Faculties" class="form-control">
+        <option value="">-- Chọn khoa --</option>
+    </select>
+</div>
     <button type="submit">Thêm</button>
 </form>
 

@@ -1,5 +1,4 @@
-@model List<FirstWebMVC.Models.Entities.Student>
-
+@model List<FirstWebMVC.Models.ViewModels.StudentVM>
 <h2>Danh sách sinh viên</h2>
 
 <p>
@@ -11,6 +10,7 @@
         <tr>
             <th>Mã SV</th>
             <th>Họ tên</th>
+            <th>Lớp</th> <!-- ✅ THÊM -->
             <th>Chức năng</th>
         </tr>
     </thead>
@@ -21,6 +21,9 @@
         <tr>
             <td>@item.StudentCode</td>
             <td>@item.FullName</td>
+
+            <td>@item.FacultyName</td>
+
             <td>
                 <a asp-controller="Student" asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
                 <a asp-controller="Student" asp-action="Delete" asp-route-id="@item.Id">Xóa</a>

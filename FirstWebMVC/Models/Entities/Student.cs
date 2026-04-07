@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FirstWebMVC.Models.Entities
 {
@@ -7,12 +8,18 @@ namespace FirstWebMVC.Models.Entities
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Mã sinh viên không được để trống")]
-        [StringLength(20, ErrorMessage = "Tối đa 20 ký tự")]
+        [StringLength(20)]
         public string StudentCode { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Tên không được để trống")]
-        [StringLength(50, ErrorMessage = "Tối đa 50 ký tự")]
+        [StringLength(50)]
         public string FullName { get; set; } = string.Empty;
+
+        // 🔑 Khóa ngoại
+        public int FacultyId { get; set; }
+
+        // Navigation
+        public Faculty? Faculty { get; set; }
+    
     }
 }
-       
