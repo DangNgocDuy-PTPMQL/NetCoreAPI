@@ -1,0 +1,15 @@
+@model FirstWebMVC.Models.Entities.DonHang
+
+<h3 class="text-danger">⚠ Bạn có chắc muốn xóa đơn hàng này?</h3>
+
+<p>
+    Khách hàng: <strong>@Model.KhachHang?.Ten</strong>
+</p>
+
+<form method="post" asp-action="DeleteConfirmed" asp-controller="DonHang">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit" class="btn btn-danger">🗑 Xóa</button>
+    <a href="/DonHang" class="btn btn-secondary">⬅ Hủy</a>
+</form>

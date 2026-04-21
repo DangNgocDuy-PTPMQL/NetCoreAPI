@@ -1,34 +1,51 @@
 @model List<FirstWebMVC.Models.ViewModels.StudentVM>
-<h2>Danh sách sinh viên</h2>
 
-<p>
-    <a asp-controller="Student" asp-action="Create">Thêm sinh viên</a>
-</p>
+<div class="container mt-4">
 
-<table border="1" cellpadding="5" cellspacing="0">
-    <thead>
-        <tr>
-            <th>Mã SV</th>
-            <th>Họ tên</th>
-            <th>Lớp</th> <!-- ✅ THÊM -->
-            <th>Chức năng</th>
-        </tr>
-    </thead>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">🎓 Danh sách sinh viên</h2>
 
-    <tbody>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.StudentCode</td>
-            <td>@item.FullName</td>
+        <a asp-controller="Student" asp-action="Create" class="btn btn-success">
+            ➕ Thêm sinh viên
+        </a>
+    </div>
 
-            <td>@item.FacultyName</td>
+    <table class="table table-bordered table-hover shadow">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ tên</th>
+                <th>Khoa</th>
+                <th style="width:150px">Chức năng</th>
+            </tr>
+        </thead>
 
-            <td>
-                <a asp-controller="Student" asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
-                <a asp-controller="Student" asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-center">@item.StudentCode</td>
+                <td>@item.FullName</td>
+                <td>@item.FacultyName</td>
+
+                <td class="text-center">
+                    <a asp-controller="Student" asp-action="Edit" asp-route-id="@item.Id"
+                       class="btn btn-warning btn-sm">
+                        ✏ Sửa
+                    </a>
+                    <a asp-action="ImportExcel" class="btn btn-warning">
+    Import Excel
+</a>
+
+                    <a asp-controller="Student" asp-action="Delete" asp-route-id="@item.Id"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Bạn có chắc muốn xóa?');">
+                        🗑 Xóa
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+</div>

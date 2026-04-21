@@ -1,0 +1,34 @@
+@model List<FirstWebMVC.Models.Entities.ChiTietDonHang>
+
+<h2 class="mb-4">📋 Chi tiết đơn hàng</h2>
+
+<div class="container">
+
+    <a href="/ChiTietDonHang/Create" class="btn btn-primary mb-3">
+        ➕ Thêm chi tiết
+    </a>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Đơn hàng</th>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+            </tr>
+        </thead>
+
+        <tbody>
+@foreach (var item in Model)
+{
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.DonHangId</td>
+                <td>@item.SanPham?.Ten</td>
+                <td>@item.SoLuong</td>
+            </tr>
+}
+        </tbody>
+    </table>
+
+</div>

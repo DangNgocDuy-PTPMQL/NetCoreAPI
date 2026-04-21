@@ -1,0 +1,26 @@
+@model FirstWebMVC.Models.Entities.KhachHang
+
+<h2 class="mb-4">Thêm khách hàng</h2>
+
+<form method="post" class="container" style="max-width:500px">
+
+    <div class="mb-3">
+        <label asp-for="Ten" class="form-label"></label>
+        <input asp-for="Ten" class="form-control" />
+        <span asp-validation-for="Ten" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DienThoai" class="form-label"></label>
+        <input asp-for="DienThoai" class="form-control" />
+        <span asp-validation-for="DienThoai" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu</button>
+</form>

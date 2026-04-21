@@ -1,0 +1,46 @@
+@model FirstWebMVC.Models.Entities.ChiTietDonHang
+
+<div class="container mt-4">
+    <div class="card shadow p-4">
+        <h2 class="mb-4 text-center">➕ Thêm chi tiết đơn hàng</h2>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label class="form-label">Đơn hàng</label>
+                <select asp-for="DonHangId" class="form-select">
+                    @foreach (var dh in ViewBag.DonHangs)
+                    {
+                        <option value="@dh.Id">Đơn #@dh.Id</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sản phẩm</label>
+                <select asp-for="SanPhamId" class="form-select">
+                    @foreach (var sp in ViewBag.SanPhams)
+                    {
+                        <option value="@sp.Id">@sp.Ten</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Số lượng</label>
+                <input asp-for="SoLuong" class="form-control" />
+                <span asp-validation-for="SoLuong" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a href="/ChiTietDonHang" class="btn btn-secondary">⬅ Quay lại</a>
+                <button type="submit" class="btn btn-success">💾 Lưu</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

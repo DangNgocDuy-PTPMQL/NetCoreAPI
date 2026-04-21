@@ -1,0 +1,22 @@
+@model FirstWebMVC.Models.Entities.DonHang
+
+<h2>✏ Sửa đơn hàng</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label>Khách hàng</label>
+        <select asp-for="KhachHangId" class="form-control">
+            @foreach (var kh in ViewBag.KhachHangs)
+            {
+                <option value="@kh.Id">@kh.Ten</option>
+            }
+        </select>
+    </div>
+
+    <button class="btn btn-success">💾 Lưu</button>
+    <a href="/DonHang" class="btn btn-secondary">⬅ Quay lại</a>
+
+</form>

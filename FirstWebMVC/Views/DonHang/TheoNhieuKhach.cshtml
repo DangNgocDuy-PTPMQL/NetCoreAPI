@@ -1,0 +1,31 @@
+@model List<FirstWebMVC.Models.Entities.DonHang>
+
+<form method="get">
+
+    <label>Chọn khách hàng:</label>
+
+    <select name="ids" multiple class="form-control">
+        @foreach (var kh in ViewBag.KhachHangs)
+        {
+            <option value="@kh.Id">@kh.Ten</option>
+        }
+    </select>
+
+    <button class="btn btn-primary mt-2">Xem</button>
+
+</form>
+
+<table class="table mt-3">
+    <tr>
+        <th>Khách hàng</th>
+        <th>Đơn hàng</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.KhachHang?.Ten</td>
+        <td>@item.Id</td>
+    </tr>
+}
+</table>

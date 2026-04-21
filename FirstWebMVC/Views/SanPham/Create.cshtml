@@ -1,0 +1,23 @@
+@model FirstWebMVC.Models.Entities.SanPham
+
+<div class="container mt-4">
+    <div class="card p-4 shadow">
+        <h2>➕ Thêm sản phẩm</h2>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label>Tên sản phẩm</label>
+                <input asp-for="Ten" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label>Giá</label>
+                <input asp-for="Gia" class="form-control" />
+            </div>
+
+            <button class="btn btn-success">💾 Lưu</button>
+
+        </form>
+    </div>
+</div>

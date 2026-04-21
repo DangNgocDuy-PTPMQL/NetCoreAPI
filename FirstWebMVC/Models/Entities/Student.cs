@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace FirstWebMVC.Models.Entities
 {
+    [Index(nameof(StudentCode), IsUnique = true)]
     public class Student
     {
         public int Id { get; set; }
@@ -16,7 +18,7 @@ namespace FirstWebMVC.Models.Entities
         public string FullName { get; set; } = string.Empty;
 
         // 🔑 Khóa ngoại
-        public int FacultyId { get; set; }
+         public int? FacultyId { get; set; }
 
         // Navigation
         public Faculty? Faculty { get; set; }

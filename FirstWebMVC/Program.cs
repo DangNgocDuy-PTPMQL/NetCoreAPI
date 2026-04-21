@@ -1,7 +1,10 @@
 using FirstWebMVC.Data;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 
 var builder = WebApplication.CreateBuilder(args);
+ExcelPackage.License.SetNonCommercialOrganization("Ngoc Duy");
+
 
 builder.Services.AddControllersWithViews();
 

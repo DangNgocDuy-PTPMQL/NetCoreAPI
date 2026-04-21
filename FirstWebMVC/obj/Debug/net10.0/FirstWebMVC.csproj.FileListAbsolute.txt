@@ -337,3 +337,8 @@ D:\Git\Net Core API\FirstWebMVC\obj\Debug\net10.0\refint\FirstWebMVC.dll
 D:\Git\Net Core API\FirstWebMVC\obj\Debug\net10.0\FirstWebMVC.pdb
 D:\Git\Net Core API\FirstWebMVC\obj\Debug\net10.0\FirstWebMVC.genruntimeconfig.cache
 D:\Git\Net Core API\FirstWebMVC\obj\Debug\net10.0\ref\FirstWebMVC.dll
+D:\Git\Net Core API\FirstWebMVC\bin\Debug\net10.0\EPPlus.dll
+D:\Git\Net Core API\FirstWebMVC\bin\Debug\net10.0\EPPlus.Interfaces.dll
+D:\Git\Net Core API\FirstWebMVC\bin\Debug\net10.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Git\Net Core API\FirstWebMVC\bin\Debug\net10.0\System.Security.Cryptography.Pkcs.dll
+D:\Git\Net Core API\FirstWebMVC\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Security.Cryptography.Pkcs.dll

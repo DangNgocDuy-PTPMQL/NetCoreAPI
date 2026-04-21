@@ -1,17 +1,14 @@
 @model FirstWebMVC.Models.Entities.Student
 
-<h2>Xóa sinh viên</h2>
+<h3 class="text-danger">⚠ Bạn có chắc muốn xóa sinh viên?</h3>
 
-<form method="post">
+<p>
+    <strong>@Model.FullName</strong> - @Model.StudentCode
+</p>
 
-<input type="hidden" asp-for="Id"/>
+<form method="post" asp-action="DeleteConfirmed" asp-controller="Student">
+    <input type="hidden" asp-for="Id" />
 
-<p>Bạn có chắc muốn xóa sinh viên này?</p>
-
-<p>@Model.StudentCode - @Model.FullName</p>
-
-<button type="submit">Xóa</button>
-
-<a href="/Student">Hủy</a>
-
-</form>
+    <button type="submit" class="btn btn-danger">🗑 Xóa</button>
+    <a href="/Student" class="btn btn-secondary">⬅ Hủy</a>
+</form> 

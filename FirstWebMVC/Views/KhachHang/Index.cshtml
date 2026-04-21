@@ -1,0 +1,49 @@
+@model List<FirstWebMVC.Models.Entities.KhachHang>
+
+<h2 class="mb-4">Danh sách khách hàng</h2>
+
+<div class="mb-3">
+    <a href="/KhachHang/Create" class="btn btn-primary">
+        ➕ Thêm khách hàng
+    </a>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Email</th>
+            <th>Điện thoại</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Ten</td>
+            <td>@item.Email</td>
+            <td>@item.DienThoai</td>
+            <td>
+                <a href="/KhachHang/Edit/@item.Id" class="btn btn-warning btn-sm">
+                    ✏ Sửa
+                </a>
+
+                <a href="/KhachHang/Delete/@item.Id"
+                   class="btn btn-danger btn-sm"
+                   onclick="return confirm('Bạn có chắc muốn xóa không?');">
+                    🗑 Xóa
+                </a>
+
+                <a href="/DonHang/TheoKhachHang/@item.Id"
+                   class="btn btn-info btn-sm">
+                    📦 Đơn hàng
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
